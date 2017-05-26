@@ -7,6 +7,7 @@ import datetime
 import shutil
 def internet_on():
     try:
+	#pinging google servers to check for internet connectivity
         urllib.request.urlopen('http://216.58.192.142', timeout=1)
         return True
     except urllib.error.URLError as err:
@@ -18,9 +19,9 @@ flag = internet_on()
 if (flag):
 	unsplash = Unsplash({
 
-		'application_id':'8ca7c148002e3ced1fb61965ce004da6f645c7879f6db940d00c022a0c7e8a92',
-		'secret':'045560a1fabe3a944699eba795db0e9561ef0672628bee4c93c551cdb8242277',
-		'callback_url':'urn:ietf:wg:oauth:2.0:oob'
+		'application_id':'YOUR_APP_ID_HERE',
+		'secret':'YOUR_SECRET_CODE_HERE',
+		'callback_url':'CALLBACK_URL_HERE'
 	})
 
 	photos = unsplash.photos().get_random_photo(query="space")
@@ -29,7 +30,7 @@ if (flag):
 
 	#print(photourl)
 	ts = time.time()
-	locationurl = "G:/Unsplash/IMG_"+str(ts)
+	locationurl = "PATH:/TO/IMAGE/IMG_"+str(ts)
 	locationurlnew = locationurl.replace(".","")
 	locationurlfinal = locationurlnew+".jpg"
 	#print(locationurlfinal)
@@ -41,7 +42,7 @@ if (flag):
 
 else:
 	#print("No internet")
-	randpic = random.choice(os.listdir("G:/Unsplash"))
+	randpic = random.choice(os.listdir("PATH:/TO/IMAGE"))
 	finalrandpic = "G:/Unsplash/"+randpic
 	SPI_SETDESKWALLPAPER = 20
 	SPIF_UPDATEINIFILE = 1
