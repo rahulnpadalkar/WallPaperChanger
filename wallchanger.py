@@ -43,7 +43,7 @@ if (flag):
 else:
 	#print("No internet")
 	randpic = random.choice(os.listdir("PATH:/TO/IMAGE"))
-	finalrandpic = "G:/Unsplash/"+randpic
+	finalrandpic = "PATH:/TO/IMAGE"+randpic
 	SPI_SETDESKWALLPAPER = 20
 	SPIF_UPDATEINIFILE = 1
 	ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, finalrandpic, SPIF_UPDATEINIFILE)
