@@ -1,6 +1,6 @@
-# Wallpaper Chnager
+# Wallpaper Changer
 
-Change wallpapers bby grabbing fresh ones from Unsplash
+Change wallpapers by grabbing fresh ones from Unsplash
 
 ## Getting Started
 
@@ -10,7 +10,7 @@ Place your keys in the Py file
 Give a path for the script to download the wallapapers
 Thats it. 
 
-### Prerequisites
+## Prerequisites
 
 Python
 
