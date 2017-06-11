@@ -1,1 +1,1 @@
-"#WallPaperChanger" 
+Wallpaper Changer for Windows 
